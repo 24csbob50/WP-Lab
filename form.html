@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(45, 67, 209, 0.563),rgba(251, 17, 87, 0.558)),url("https://4kwallpapers.com/images/wallpapers/dark-background-abstract-background-network-3d-background-3840x2160-8324.png");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;      
+    justify-content: center;
+    align-items: center;    
+    }
+
+.container {
+    width: 70%;
+    max-width: 600px;
+    background-color: rgb(41, 10, 5);
+    padding: 30px;
+    border-radius: 20%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+        h2 {
+            text-align: center;
+            color: #e5b7e2;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .form-group:hover {
+            background-color: rgba(255, 72, 0, 0.174);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #e3dbdb;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .checkbox-group, .radio-group {
+            margin-top: 5px;
+            text-align: center;
+        }
+        .checkbox-group label, .radio-group label {
+            display: inline;
+            margin: 0 10px;
+        }
+   
+
+        .button-group {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"] {
+            background-color: #4e0561;
+            color: white;
+        }
+
+        button[type="reset"] {
+            background-color: #1f6209;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #e5b7e2;
+            color: #b31a1a;
+        }
+
+
+    </style>
+</head>
+<body>
+    <section class="header">
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form>
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" >
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" >
+            </div>
+
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="male" >
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject of Interest</label>
+                <select id="subject" name="subject" >
+                    <option value="">Select a subject</option>
+                    <option value="SE">Software engineering </option>
+                    <option value="AI">Artificial intelligence</option>
+                    <option value="ML">Machine Learning</option>
+                    <option value="CB">Cybersecurity</option>
+                    <option value="CA">Integration Architect</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Languages Known</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="python" name="languages" value="p">
+                    <label>Python</label>
+                    <input type="checkbox" id="CPP" name="languages" value="c">
+                    <label>C++/ C</label>
+                    <input type="checkbox" id="Java" name="languages" value="j">
+                    <label>Java</label>
+                    <input type="checkbox" id="ruby" name="languages" value="r">
+                    <label>Ruby</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" >
+            </div>
+
+            <div class="form-group">
+                <label>Contact No.</label>
+                <input type="tel" id="contact" name="contact" >
+            </div>
+
+            <div class="form-group">
+                <label >Address</label>
+                <input type="text" id="address" name="address" >
+            </div>
+
+            <div class="form-group">
+                <label>Pincode</label>
+                <input type="text" id="pincode" name="pincode" >
+            </div>
+
+            <div class="form-group">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" >
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country</label>
+                <input type="text" id="country" name="country" >
+            </div>
+
+            <div class="button-group">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
