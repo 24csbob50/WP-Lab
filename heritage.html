@@ -20,12 +20,63 @@ body{
 .text{
   color: antiquewhite;
 }
+nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 15px 30px;
+            position: fixed;
+            top: 5;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
 
+        nav a img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-links ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links ul li {
+            display: inline-block;
+        }
+
+        .nav-links ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links ul li a:hover {
+            color: #FFA67E;
+        }
 
 
 </style>
 </head>
 <body>
+  <nav>
+        <a href="https://24csbob50.github.io/WP-Lab/erode">
+            <img src="https://cdn-icons-png.flaticon.com/512/12910/12910281.png">
+        </a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="https://24csbob50.github.io/WP-Lab/erode" target="_blank">HOME</a></li>
+                <li><a href="https://24csbob50.github.io/WP-Lab/heritage" target="_blank">HERITAGE</a></li>
+                <li><a href="https://24csbob50.github.io/WP-Lab/booking">BOOK A HOTEL</a></li>
+                <li><a href="https://24csbob50.github.io/WP-Lab/gallery">GALLERY</a></li>
+            </ul>
+        </div>
+    </nav>
   <div class="text">
 <h2>HERITAGE SITES IN ERODE</h2>
 <pre><h3>Erode is home to several significant heritage sites. The Chennimalai Murugan Temple, perched on a hill, 
