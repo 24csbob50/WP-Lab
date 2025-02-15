@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NITW</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:sans-serif ;
+        }
+        header{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            padding:14px;
+            background-color: #2B4675;
+            height: 45px;
+        }
+
+        .nav-container{
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .sec-container{
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            justify-content: center;
+        }
+        .fb-button{
+            border:none;
+            width: 30px;
+            height: 30px;
+            background: transparent;
+            align-items:center;
+        }
+        .fb-button img{
+            width:30px;
+        }
+        .sec-button{
+            border:none;
+            width: 120px;
+            height: 30px;
+            background: transparent;
+            align-items:center;
+            font-size: large;
+            font-weight:bold;
+        }
+        .sec-button img{
+            padding-right: 40px;
+            height: 55px;
+            width: 130px;
+        }
+        .trans-button{
+            border-radius: 100%;
+            border-color: #2B4675;
+            width: 35px;
+            height: 35px;
+            background-color: rgb(237, 227, 227);
+            align-items:end;
+        }
+        .trans-button img{
+            width:20px;
+        }
+        .text{
+            font-size: medium;
+            color: antiquewhite;
+        }
+        .nitw-main{
+            border: none;
+            background: transparent;
+            justify-content: center;
+        }
+        .nitw-main img{
+            align-items: center;
+            justify-content: center;
+            height: 120px;
+            padding-top: 20px;
+        }
+        .nitw-sec{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .search img{
+            border: none;
+            background: transparent;
+            height: 25px;
+            width: 25px;
+        }
+        .slider-container {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            animation: slideShow 16s infinite;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slide:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .slide:nth-child(2) {
+            animation-delay: 4s;
+        }
+
+        .slide:nth-child(3) {
+            animation-delay: 8s;
+        }
+
+        .slide:nth-child(4) {
+            animation-delay: 12s;
+        }
+        @keyframes slideShow {
+            0%, 20% {
+                opacity: 1;
+            }
+            25%, 95% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        .paragraphs {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .upcoming-events, .awards {
+        width: 45%;
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+    }
+    .event-slide-container {
+        display: flex;
+        width: 500%;
+        animation: slideRightToLeft 50s infinite linear;
+        border-color: brown;
+    }
+    .event-slide {
+        width: 100%;
+        text-align: center;
+        border-color: brown;
+    }
+    .event-slide img {
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+    }
+    .event-slide p {
+        background: #2B4675;
+        color: white;
+        padding: 10px;
+    }
+    @keyframes slideRightToLeft {
+        0% { transform: translateX(0); }
+        20% { transform: translateX(-100%); }
+        40% { transform: translateX(-200%); }
+        60% { transform: translateX(-300%); }
+        80% { transform: translateX(-400%); }
+    }
+
+    .award-slide-container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        animation: slideBottomToTop 50s infinite linear;
+    }
+    .award-slide {
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        background: #F4F4F4;
+        border: 1px solid #ddd;
+    }
+    @keyframes slideBottomToTop {
+        0% { transform: translateY(0); }
+        20% { transform: translateY(-100%); }
+        40% { transform: translateY(-200%); }
+        60% { transform: translateY(-300%); }
+        80% { transform: translateY(-400%); }
+    }
+    .image-grid {
+            display: flex;
+            width: 50vw;
+            height: 50vh;
+        }
+
+        .image-grid img {
+            flex: 1;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .text{
+            text-align: center;
+            color: black;
+        }
+        .link{
+            text-decoration: none;
+            color: black;
+        }
+        .link:hover{
+            text-decoration: underline;
+        }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <p style="color: aliceblue;"><b>Welcome to National Institute of Technology Warangal</b></p>
+        </div>
+        <nav class="sec-container">
+            <button class="fb-button"><a href="https://www.nitw.ac.in/"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png"></a></button></a>
+            <button class="fb-button"><a href="https://www.nitw.ac.in/"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670151.png "></button></a>
+            <button class="fb-button"><a href="https://www.nitw.ac.in/"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png "></button></a>
+            <button class="trans-button"><a href="https://www.nitw.ac.in/"><img src="https://cdn-icons-png.flaticon.com/512/3128/3128219.png  "></button></a>
+            <button class="fb-button"><a href="https://www.nitw.ac.in/"><img src="https://cdn-icons-png.flaticon.com/512/3955/3955024.png "></button></a>
+            <button class="trans-button"><a href="https://www.nitw.ac.in/"><img src="https://cdn-icons-png.flaticon.com/512/2989/2989839.png"></button></a>
+            <button class="trans-button"><a href="https://www.nitw.ac.in/"><img src="https://cdn-icons-png.flaticon.com/512/74/74158.png "></button></a>
+            <button class="trans-button"><a href="https://www.nitw.ac.in/"><img src="https://cdn-icons-png.flaticon.com/512/9899/9899316.png "></button></a>
+        </nav>
+    </header>
+    <section class="nitw-sec">
+        <div>
+            <a href="https://www.nitw.ac.in/"><button class="nitw-main"><img src="https://www.nitw.ac.in/images/NITW_logo_telugu3.png"></button></a> 
+        </div>
+        <div >
+            <a href="https://www.nitw.ac.in/" class="search"><img src="   https://cdn-icons-png.flaticon.com/512/10385/10385257.png "></a> 
+        </div>
+    </section>
+    <section class="sec-line">
+        <nav class="sec-container">
+            <button class="fb-button"><a  href="https://www.nitw.ac.in/"><img src="   https://cdn-icons-png.flaticon.com/512/14034/14034653.png "></button></a>
+            <button class="sec-button"><a class="link"  href="https://www.nitw.ac.in/">Institute</button></a>
+            <button class="sec-button"><a class="link"  href="https://www.nitw.ac.in/">Administration</button></a>
+            <button class="sec-button"><a class="link"  href="https://www.nitw.ac.in/">Academics</button></a>
+            <button class="sec-button"><a class="link"  href="https://www.nitw.ac.in/">R & D</button></a>
+            <button class="sec-button"><a class="link"  href="https://www.nitw.ac.in/">Students</button></a>
+            <button class="sec-button"><a class="link"  href="https://www.nitw.ac.in/">Alumni</button></a>
+            <button class="sec-button"><a  href="https://www.nitw.ac.in/"><img src="https://amritmahotsav.nic.in/writereaddata/portal/images/g-20-logo.png "></button></a>
+            <button class="sec-button"><a href="https://www.nitw.ac.in/"><img src="https://amritmahotsav.nic.in/writereaddata/portal/images/logo-black.png "></button></a>
+        </nav>
+    </section>
+    <br><br>
+    <div class="slider-container">
+        <div class="slide">
+            <img src="https://nitw.ac.in/api/static/files/Research_Collaboration_in_Armament_Field_2024-5-1-17-28-26.jpg" alt="Campus View 1">
+        </div>
+        <div class="slide">
+            <img src="https://nitw.ac.in/api/static/files/Swachhata_Hi_Seva_2024_2024-9-23-14-37-39.jpg" alt="Campus View 2">
+        </div>
+        <div class="slide">
+            <img src="https://nitw.ac.in/api/static/files/Teaching_for_Inclusion:_Principles_for_Effective_Practice_2024-9-26-17-34-36.jpg" alt="Campus View 3">
+        </div>
+        <div class="slide">
+            <img src="https://nitw.ac.in/api/static/files/Future_of_the_Indian_Biotech_Sector_2024-9-18-11-52-37.jpg" alt="Campus View 4">
+        </div>
+    </div>
+    <br>
+    <hr>
+    <marquee behavior="slide" direction="left">
+        <div style="display: flex; align-items: center;">
+            <button style="background-color: rgb(255, 157, 0); color: antiquewhite; height: 30px; width: 60px; border: none; margin-right: 10px;">
+                <h3 style="margin: 0;">New</h3>
+            </button>
+            <h3 style="margin: 0;">- Notice - List of candidates provisionally shortlisted/ not-shortlisted for the Group 'A' posts and Group 'B' (Deputation) posts notified vide Advt. No. 05/2024 dt.29.11.2024 New Pattern of Examination and Indicative Syllabus for the Group 'B' & 'C' posts notified on Direct Recruitment basis against Advt. No. 05/2024 dated 29.11.2024</h3>
+        </div>
+    </marquee>
+    <hr>
+    <br>
+    <br>
+    <pre><h1>                 UPCOMING EVENTS                                  AWARDS AND RECOGNITIONS</h1></pre>
+    <section class="paragraphs">
+        <div class="upcoming-events">
+            <div class="event-slide-container">
+                <div class="event-slide">
+                    <img src="https://nitw.ac.in/api/static/files/GIAN_CED_21-25,_April_2025_2024-12-31-14-17-39.jpg" alt="Event 1">
+                    <pre>A 5-days GIAN Course on Decision Support to Prioritize
+                         Smart City Projects.</pre>
+                </div>
+                <div class="event-slide">
+                    <img src="https://nitw.ac.in/api/static/files/confj_2024-12-16-19-20-57.jpg" alt="Event 2">
+                    <p>INCEEE-2025 (25-26 June, 2025)</p>
+                </div>
+                <div class="event-slide">
+                    <img src="https://nitw.ac.in/api/static/files/upcoming_Evens_2025-2-14-12-29-0.jpg" alt="Event 3">
+                    <pre>Diamond Jubilee Lecture as a part of Diamond Jubilee
+                         events</pre>
+                </div>
+            </div>
+        </div>
+        <div class="awards">
+            
+            <div class="award-slide-container">
+                <div class="award-slide">
+                    <pre>Prof. Ashish Prabhu, Assistant Professor,
+Department of Biotechnology, has been 
+awarded the Best Young Scientist Award at
+the 4th International Conference on 
+Bioprocess for Sustainable Environment 
+and Energy, held at NIT Rourkela.
+                    </pre>
+                </div>
+                <div class="award-slide">
+                    <pre>Prof Jew Das (CE) has been chosen for the
+esteemed Water Advanced Research and 
+Innovation (WARI) Fellowship Program, 
+sponsored by the Indo-US Science and 
+Technology Forum (IUSSTF), the Daugherty
+Water for Food Institute (DWFI), the Uni-
+versity of Nebraska-Lincoln (UNL), and the
+Department of Science and Technology, 
+Government of India.
+                    </pre>
+                </div>
+                <div class="award-slide">
+                    <pre>Prof. Manohar K, Assistant Professor, CH
+on being honored with "Excellence in 
+Academics and Technology Development" Award 
+by IITH
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <br>
+    <br>
+    <div class="text"><h1 >CAMPUS BULLETIN</h1></div>
+    <div class="image-grid">
+        <img src="https://nitw.ac.in/api/static/files/65th_Foundation_Day_4_2023-10-17-20-31-46.jpg" alt="Image 1">
+        <img src="https://nitw.ac.in/api/static/files/21st_Convocation_2023_v5_2023-10-3-11-0-13.jpg" alt="Image 2">
+        <img src="https://nitw.ac.in/api/static/files/NITWian_Best_Practices_Campaign_v3_2023-8-14-11-15-45.jpg" alt="Image 3">
+    </div>
+</body>
+</html>
