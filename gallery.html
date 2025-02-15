@@ -17,7 +17,36 @@
             color: #333;
             text-align: center;
         }
+        nav{
+    display: flex;
+    padding: 4% 6%;
+    justify-content: space-between;
+    align-items: center;
+    position:absolute;
+    top: 0;
+    left:0;
+}
+nav a img {
+    height: 50px;
+    width: auto;
+}
 
+.nav-links{
+    display: flex;
+    margin-left: auto;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 7px 12px;
+    position: relative;
+    text-align: right;
+}
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    
+}
         header {
             background-color: #FFA67E;
             color: white;
@@ -57,6 +86,18 @@
     </style>
 </head>
 <body>
+
+    <nav>
+        <a href="https://24csbob50.github.io/WP-Lab/erode"><img src="https://cdn-icons-png.flaticon.com/512/12910/12910281.png"></a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="https://24csbob50.github.io/WP-Lab/erode" target="_blank"> HOME</a></li>
+                <li><a href="https://24csbob50.github.io/WP-Lab/heritage" target="_blank"> HERITAGE</a></li>
+                <li><a href="https://24csbob50.github.io/WP-Lab/booking"> BOOK A HOTEL</a></li>
+                <li><a href="https://24csbob50.github.io/WP-Lab/gallery"> GALLERY</a></li>
+            </ul>
+        </div>
+    </nav>
     <header>
         <h1>Photo Gallery</h1>
     </header>
