@@ -13,8 +13,49 @@
             background-size: cover;
             background-attachment: fixed;
             margin: 0;
-            padding: 0;
+            padding-top: 90px; 
         }
+        nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1000;
+  height: 70px;
+}
+
+        nav a img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-links ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links ul li {
+            display: inline-block;
+        }
+
+        .nav-links ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links ul li a:hover {
+            color: #FFA67E;
+        }
+
         h1 {
             color: #f2c0c0;
             text-align: center;
@@ -82,6 +123,19 @@
     </style>
 </head>
 <body style="text-align: center; color: #ffffff;">
+    <nav>
+        <a href="https://24csbob50.github.io/WP-Lab/erode">
+            <img src="https://cdn-icons-png.flaticon.com/512/12910/12910281.png">
+        </a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="https://24csbob50.github.io/WP-Lab/erode" >HOME</a></li>
+                <li><a href="https://24csbob50.github.io/WP-Lab/heritage" >HERITAGE</a></li>
+                <li><a href="https://24csbob50.github.io/WP-Lab/booking">BOOK A HOTEL</a></li>
+                <li><a href="https://24csbob50.github.io/WP-Lab/gallery">GALLERY</a></li>
+            </ul>
+        </div>
+    </nav>
     <div class="text"><h1>Book a Hotel</h1></div>
     <div class="form-section">
         <label for="name" style="font-size:30px;">Name:</label>
