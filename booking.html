@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #f4f4f4;
+            background-color: #242323;
+            background-image: linear-gradient(rgba(69, 58, 9, 0.7)
+            ,rgba(55, 21, 10, 0.7)),url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAud71p6syLoBTXwW4TYKNByrm0NBwbzsEhQ&s");
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #f2c0c0;
+            text-align: center;
+            font-size: 50px;
+            margin-top: 30px;
+        }
+
+        form {
+            background-color: #242323;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            margin: 50px auto;
+            font-size: 50px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        
+        textarea {
+            width: 100%;
+            padding: 30px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 30px;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #b30000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #800000;
+        }
+
+        .form-section {
+            margin-bottom: 20px;
+        }
+
+        .form-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+        .text{
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body style="text-align: center; color: #ffffff;">
+    <div class="text"><h1>Book a Hotel</h1></div>
+    <div class="form-section">
+        <label for="name" style="font-size:30px;">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+    </div>
+
+    <div class="form-section">
+        <label for="mobile" style="font-size:30px;">Mobile No.:</label>
+        <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number">
+    </div>
+
+    <div class="form-section">
+        <label for="email" style="font-size:30px;">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+    </div>
+
+    <div class="form-section">
+        <label style="font-size:30px;">Gender:</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+    </div>
+
+    <div class="form-section">
+        <label for="start-date" style="font-size:30px;">Date of Start of Vacation:</label>
+        <input type="date" id="start-date" name="start-date">
+    </div>
+
+    <div class="form-section">
+        <label for="end-date" style="font-size:30px;">Date of End of Vacation:</label>
+        <input type="date" id="end-date" name="end-date">
+    </div>
+
+    <div class="form-section">
+        <label for="people" style="font-size:30px;">No. of People:</label>
+        <input type="number" id="people" name="people" placeholder="Enter number of people">
+    </div>
+
+    <div class="form-section">
+        <label for="spots" style="font-size:30px;">Preferred Hotel:</label>
+        <select id="spots" name="spots">
+            <option value="Maharana Pratap Memorial">KG Grand Hotel</option>
+            <option value="City Palace Museum">Hotel O Mettur</option>
+            <option value="Lake Pichola">Shree residency</option>
+            <option value="Jag Mandir Palace">Hotel Turmeric</option>
+            <option value="Westland hotel">Jagdish Temple</option>
+        </select>
+    </div>
+
+    <div class="form-section">
+        <label style="font-size:30px;">Food Preferences:</label>
+        <input type="radio" id="veg" name="food" value="veg">
+        <label for="veg">Veg</label>
+        <input type="radio" id="non-veg" name="food" value="non-veg">
+        <label for="non-veg">Non-Veg</label>
+        <input type="radio" id="both" name="food" value="both">
+        <label for="both">Both</label>
+    </div>
+
+    <div class="form-section">
+        <label for="choices" style="font-size:30px;">Special Comments:</label>
+        <textarea id="choices" name="choices" rows="4" placeholder="Enter any additional comments"></textarea>
+    </div>
+
+    <div class="form-section">
+        <label style="font-size:30px;">Payment:</label>
+        <input type="radio" id="card" name="payment" value="card">
+        <label for="card">Card</label>
+        <input type="radio" id="cash" name="payment" value="cash">
+        <label for="cash">Cash</label>
+        <input type="radio" id="upi" name="payment" value="upi">
+        <label for="upi">UPI</label>
+    </div>
+
+    <div class="form-section">
+        <label for="contact">Contact Info:</label>
+        <input type="tel" id="contact" name="contact" placeholder="Enter your contact number">
+    </div>
+
+    <div class="text-center">
+        <input type="submit" value="Submit">
+    </div>
+
+</form>
+<p style="color: #ffffff;"><b>THANK YOU FOR CONTACTING US!!</b></p>
+</body>
+</html>
