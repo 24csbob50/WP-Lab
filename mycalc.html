@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.cover{
+    height: 450px;
+    width: 400px;
+    background-color: rgb(68,63,75);
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto auto ;
+  background-color: rgb(68, 63, 75);
+  padding: 10px;
+  margin-left: 13px;
+  width: 350px;
+}
+
+.container > div {
+  background-color: #f1f1f1;
+  border: 1px solid black;
+  border-radius: 30%;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+.container .equal{
+    background-color: orangered;
+}
+.container .equal:hover{
+    background-color: aqua;
+}
+.container .h:hover{
+    background-color: rgb(195, 1, 33);
+    color: white;
+}
+
+
+.box{
+    display:grid;
+    grid-template-columns: auto ;
+    height: 100px;
+    width: 350px;
+    border-radius: 10%;
+    border: 1px solid rgb(172, 160, 160);
+    background-color: rgb(176, 176, 214);
+    padding: 10px;
+    margin-left: 13px;
+    font-size: 30px;
+    text-align: right;
+    z-index: 1000;
+}
+.box :hover{
+    background-color: rgb(206, 140, 140);
+}
+.sticky-container {
+    height: 500px;
+    overflow-y: auto; /* Enables scrolling */
+    border: 1px solid black;
+    padding: 10px;
+}
+.stcky{
+    min-height: 200vh;
+    margin: 0;
+    padding: 20px;
+}
+.sticky-image {
+    position: sticky;
+    top: 20px;
+    float: right;
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+    margin: 0 20px;
+}
+.flex-container {
+  display: flex;
+  background-color: rgb(175, 7, 43);
+}
+
+.flex-container > div {
+  background-color: #000000;
+  margin: 10px;
+  padding: 10px;
+  font-size: 40px;
+  color: rgb(175, 7, 43);
+}
+.img-grid{
+    display: grid;
+    grid-template-columns: auto auto;
+    background:none;
+    padding: 20px;
+    margin-left: 20px;
+    width: 350px;
+}
+.img-in-grid{
+    height:fit-content;
+    width: fit-content;
+    padding: 20px;
+}
+
+.img-in-grid:hover{
+    z-index: 100;
+    transform: scale(1.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+</style>
+</head>
+<body>
+    <h3>STICKY IMAGE</h3>
+    <img src="https://fixthephoto.com/images/content/square-format-photography-negative-space.jpg" alt="Sticky Image" class="sticky-image">
+    
+    <br>
+    <h3>FLEXBOX</h3>
+    <div class="flex-container">
+        <div>F</div>
+        <div>L</div>
+        <div>E</div>
+        <div>X</div> 
+        <div>B</div> 
+        <div>O</div>
+        <div>X</div>
+        
+      </div>
+      <br>
+      <h3>IMAGE GRID</h3>
+      <div class="img-grid">
+        <div class="img-in-grid"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFh2W6LBqI7vSPOnv9stwYbIBwC_GWg2_dJw&s"></div>
+        <div class="img-in-grid"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqPFXkD8OIGbwK65fo1IgV4qJELKbwwKgxIBwNR-s0CUn9mCRK1HaaSfn-BdB3tfoaosk&usqp=CAU"></div>
+        <div class="img-in-grid"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNFWsBHlUqOrQ-U0i-mvS5ugPQq-u5stEgQDXt8VmjejQUyr38_U-NEsKeSXeVf6rYFas&usqp=CAU"></div>
+        <div class="img-in-grid"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ84TJvhfIpoLiCJDtmiAqp6Y6T722d_dacKbHqNILTPwg8zmNRVV3xuw6WZwlkaxzlBY&usqp=CAU"></div>
+      </div>
+
+      <br>
+      <h3>Calculator</h3>
+    <div class="cover">
+<div class="box">
+     </div>
+
+<div class="container">
+    <div class="h">%</div>
+    <div class="h">CE</div>
+    <div class="h">C</div>
+    <div class="h">/</div>
+    <div class="h">7</div>
+      <div class="h">8</div>
+      <div class="h">9</div>
+      <div class="h">*</div>
+      <div class="h">4</div>
+      <div class="h">5</div>
+      <div class="h">6</div>
+      <div class="h">-</div>
+    <div class="h">1</div>
+    <div class="h">2</div>  
+    <div class="h">3</div>
+    <div class="h">+</div>
+    <div class="h">+/-</div>
+      <div class="h">0</div>
+      <div class="h">.</div>
+      <div class="equal">=</div>
+
+</div>
+</div>
+
+
+
+</body>
+</html>
