@@ -1,0 +1,269 @@
+<html>
+    <head>
+        <title>Inline JavaScript</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <script src="un.js"></script>
+<style>
+    body {
+            background-color: #000;
+            color: orangered;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .calc{
+            height:100px;
+            width:500px;
+            align-items: center;
+            align-content: center;
+            margin-left: 500px;
+            margin-top: 20px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+
+        h1 {
+            text-align: center;
+            color: rgb(148, 31, 60);
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin: 10px 0;
+        }
+
+        .form-control {
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+            width: 250px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            background-color: #D94A38;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #567731;
+        }
+
+        .double-click {
+            background-color: #121310;
+            color: aliceblue;
+            width: 90px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .double-click:active {
+            background-color: #1ec5e5;
+        }
+
+        #demo {
+            font-size: 18px;
+            color: #FFD700;
+            margin-top: 10px;
+        }
+    
+.container-calc {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: rgb(206, 194, 223);
+  padding: 10px;
+}
+.container-calc > div {
+  background-color: #f1f1f1;
+  border: 1px solid black;
+  border-radius: 30%;
+  padding: 10px;
+  font-size: 50px;
+  height:100px;
+  width:10px;
+  text-align: center;
+}
+.container-calc .equal{
+    background-color: orangered;
+}
+.container-calc .equal:hover{
+    background-color: aqua;
+}
+.container-calc .h:hover{
+    background-color: rgb(173, 173, 194);
+    opacity: 12%;
+}
+.container-calc .input:hover{
+    background-color: rgb(22, 22, 216);
+    opacity: 12%;
+}
+
+.box-calc{
+    display:grid;
+    grid-template-columns: auto ;
+    height: 100px;
+    border: 1px solid rgb(172, 160, 160);
+    background-color: rgb(176, 176, 214);
+    padding: 10px;
+    font-size: 30px;
+    text-align: right;
+}
+.box-calc :hover{
+    background-color: rgb(206, 140, 140);
+    cursor: pointer;
+}
+.button:hover{
+    border-radius: 50%;
+    background-color: aquamarine;
+}
+
+</style>
+</head>
+<body bgcolor="black">
+    <div class="calc">
+    <div class="cover">
+<form name="calculator" class="cover">
+    <div class="box-calc">
+        <input type="textfield" name="ans" value="">
+        </div>
+    <div class="container-calc">
+<input type="button" value="1" onClick="document.calculator.ans.value+='1'">
+<input type="button" value="2" onClick="document.calculator.ans.value+='2'">
+<input type="button" value="3" onClick="document.calculator.ans.value+='3'">
+<input type="button" value="4" onClick="document.calculator.ans.value+='4'">
+<input type="button" value="5" onClick="document.calculator.ans.value+='5'">
+<input type="button" value="6" onClick="document.calculator.ans.value+='6'">
+<input type="button" value="7" onClick="document.calculator.ans.value+='7'">
+<input type="button" value="8" onClick="document.calculator.ans.value+='8'">
+<input type="button" value="9" onClick="document.calculator.ans.value+='9'">
+<input type="button" value="-" onClick="document.calculator.ans.value+='-'">
+<input type="button" value="+" onClick="document.calculator.ans.value+='+'">
+<input type="button" value="*" onClick="document.calculator.ans.value+='*'">
+<input type="button" value="/" onClick="document.calculator.ans.value+='/'">
+<input type="button" value="0" onClick="document.calculator.ans.value+='0'">
+<input type="reset" value="Reset">
+<input type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)" onclick="color=red">
+</div>
+</form>
+</div>
+</div>
+<div class="container">
+    <form class="form">
+        <div class="form-group">
+            <label for="name">Enter Your Name:</label>
+            <input id="name" class="form-control" type="text" placeholder="Input Your Name Here">
+            <button type="button" onclick="showAlert()">Submit</button>
+        </div>
+    </form>
+
+    <form class="form">
+        <div class="form-group">
+            <label for="name" style=color:#756a2c>Enter your name</label>
+            <input id="nameext" class="form-control" type="text" placeholder="Input Your Name Here">
+            <button type="button" style=background-color:#635c34 onclick="spoiler()">Submit</button>
+
+        </div>
+    </form>
+
+    <form class="form">
+        <div class="form-group">
+            <label for="numb">Enter Your Age:</label>
+            <input id="numb" class="form-control" type="number" placeholder="Enter your age">
+            <button type="button" onclick="checkvalid()">Submit</button>
+        </div>
+    </form>
+
+    <div class="double-click" onmousedown="down(this)" onmouseup="up(this)" onmouseover="mOver(this)" onmouseout="mOut(this)">
+        Hover
+    </div>
+
+    <button onclick="enter()">Try</button>
+    <p id="demo"></p>
+</div>
+
+<script>
+    function showAlert() {
+        let name = document.getElementById("name");
+        let value = name.value.trim();
+        if (!value)
+            alert("Inline-name cannot be empty");
+        else
+            alert("Hello, " + value + "!\nGreetings-Inline");
+    }
+
+    function checkvalid() {
+        let x = document.getElementById("numb").value;
+        let text;
+        if (!x || x < 18 || x > 60) {
+            text = "Age doesn't meet requirements";
+        } else {
+            text = "Input OK";
+        }
+        document.getElementById("demo").innerHTML = text;
+    }
+
+    function down(obj) {
+        obj.style.backgroundColor = "#1ec5e5";
+        obj.innerHTML = "Leave";
+    }
+
+    function up(obj) {
+        obj.style.backgroundColor = "#D94A38";
+        obj.innerHTML = "Well done";
+    }
+
+    function mOver(obj) {
+        obj.style.backgroundColor = "#567731";
+        obj.innerHTML = "Hold";
+    }
+
+    function mOut(obj) {
+        obj.style.backgroundColor = "#317768";
+        obj.innerHTML = "Bye";
+    }
+
+    function upper() {
+        const x = document.getElementById("name");
+        x.value = x.value.toUpperCase();
+    }
+
+    function enter() {
+        let text;
+        let person = prompt("Enter your name:", "Guest");
+        if (person == null) {
+            text = "Prompt cancelled";
+        } else if (person == "") {
+            text = "User did not enter any name. Default name taken as Guest";
+        } else {
+            text = "Hello " + person + "!";
+        }
+        document.getElementById("demo").innerHTML = text;
+    }
+</script>
+</body>
+</html>
