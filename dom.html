@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVIES</title>
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgb(75, 73, 73);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.147);
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo{
+            height:40px;
+            width: 40px;
+        }
+        .logo img {
+            height: 100%; 
+            width: 100%; 
+            object-fit: contain;
+        }
+
+        .nav-links a {
+            padding: 10px;
+            text-decoration: none;
+            color: #e0e0e0;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #b3b3b4;
+            transition: width 0.3s ;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        .search{
+            display: flex;
+        }
+        .symbol{
+            height:40px;
+            width: 40px;
+            padding: 10px;
+        }
+        .symbol img{
+            height: 100%; 
+            width: 100%; 
+            object-fit: contain;
+        }
+        .symbol input{
+            text-align: center;
+        }
+
+        body {
+            background-color: #afafaf;
+            color: rgb(250, 250, 250);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            justify-content: center;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+    
+        .divided{
+            display: flex;
+            margin-top: 100px;
+        }
+        
+        
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            background-color: #ffffff;
+            color: rgb(185, 11, 11);
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        h2{
+            color: rgb(148, 147, 147); 
+            text-align: center;
+        }
+
+        button:hover {
+            background-color: #d8d9da;
+        }
+        
+        .product-list >div{
+            color: #000;
+            border: 1px solid black;
+            max-height: 600px;
+            max-width: 200px;
+            margin: 10px;
+            font-size: 30px;
+            text-align: center;
+        }
+        .product-list >div img{
+            height: 50%;
+            width: 50%;
+
+            object-fit: contain;
+        }
+       
+
+        
+        .cart{
+            margin-right: 30px;
+            max-height: 100%;
+            color: #333;
+        }
+        .items{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .product {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            margin: 50px;
+            transition: transform 0.3s ease;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .product.this.price{
+            font-size: smaller;
+        }
+
+        .product button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .product button:hover {
+            background-color: #218838;
+        }
+
+        .cart {
+            width: 500px;
+            padding: 20px;
+            position:sticky;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .cart h2 {
+            margin-bottom: 15px;
+            color: brown;
+        }
+        .cart h2.dark{
+            color: #afafaf;
+        }
+
+        .cart-items {
+            max-height: 100%;
+            overflow-y: auto;
+        }
+
+        .cart-item {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #a8a8a8;
+            color: #333;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cart-item span {
+            font-size: 1.2rem;
+        }
+        
+        footer {
+            background: rgb(75, 73, 73);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .icons {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 25px;
+        }
+
+        .icons a {
+            color: white;
+            text-decoration: none;
+            font-size: 30px;
+            transition: transform 0.9s ease;
+        }
+
+        .icons a:hover {
+            transform: rotate(360deg);
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .form-group:hover {
+            background-color: rgba(255, 72, 0, 0.174);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #af8c5d;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        body.dark {
+            background-color: #121212; 
+            color: white; 
+        }
+
+        body.dark button {
+            background-color: #333;
+            color: white;
+        }
+    
+        body.dark .cart {
+            background-color: #3f3f3f;
+            color: #c4c1c1;
+        }
+
+        body.dark .nav-links a {
+            color: white;
+        }
+        .cart-item.dark{
+            color: #dfdbdb;
+            background-color: #333;
+        }
+       
+        h2.dark{
+            color: rgb(255, 255, 255); 
+        }
+        label.dark{
+            color: rgb(255, 255, 255); 
+        }
+        .countdown-timer {
+            text-align: center;
+            margin-top: 10px;
+            background-color: #121212;
+            border-radius: 10%;
+            max-width: 200px;
+        }
+
+        .countdown-timer input {
+            font-size: 10px;
+            padding: 5px;
+            width: 100px;
+            text-align: center;
+        }
+
+        .timer-display {
+            font-size: 20px;
+            color: #afafaf;
+            font-weight: bold;
+            margin: 20px;
+        }
+
+        .countdown-buttons button {
+            padding: 3px 6px;
+            margin: 2px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+        }
+
+        .countdown-buttons button:hover {
+            background-color: #45a049;
+        }
+
+        .countdown-buttons button:disabled {
+            background-color: #d3d3d3;
+            cursor: not-allowed;
+        }
+
+        body.dark .countdown-timer {
+            color: white;
+        }
+
+        body.dark .countdown-timer input {
+            background-color: #333;
+            color: white;
+        }
+
+        .green-bg {
+            background-color: #4CAF50;
+        }
+
+        .yellow-bg {
+            background-color: #FFEB3B;
+        }
+
+        .red-bg {
+            background-color: #F44336;
+        }
+        .toggle>img{
+            max-width: 20px;
+            max-height: 20px;
+        }
+        .checkbox {
+        display: none;
+    }
+
+    .toggle label {
+        display: flex;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .icons {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .icon {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+    .icons #icon1{
+        opacity: 1;
+    }
+    .icons #icon2{
+        opacity: 0;
+    }
+
+    .checkbox:checked + label .icons #icon1 {
+        opacity: 0;
+    }
+
+    .checkbox:checked + label .icons #icon2 {
+        opacity: 1;
+    }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><img src="https://cdn-icons-png.flaticon.com/512/603/603839.png"></div>
+            <div class="nav-links">
+                <a href="class.html">Home</a>
+                <a href="class.html">Categories</a>
+                <a href="class.html">View Cart</a>
+                <a href="class.html">About</a>
+                <a href="class.html">Contact</a>
+            </div>
+            <div class="toggle">
+                <input type="checkbox" id="toggle" class="checkbox">
+                
+                <label for="toggle">
+                    <span class="icons">
+                        <img src="https://cdn-icons-png.flaticon.com/128/581/581601.png" class="icon" id="icon1">
+                        <img src="https://cdn-icons-png.flaticon.com/128/439/439842.png" class="icon" id="icon2">
+                    </span>
+                </label>
+            </div>
+        
+            
+        </nav>
+    </header>
+   
+
+    <div class="divided">
+        
+        <div class="cart">
+            <div class="countdown-timer">
+                <h2>Timer</h2>
+                <input type="number" id="timer-input" placeholder="Enter seconds" min="1" />
+                <div class="timer-display" id="timer-display">0</div>
+                <div class="countdown-buttons">
+                    <button id="start-btn">Start</button>
+                    <button id="pause-btn" disabled>Pause</button>
+                    <button id="reset-btn" disabled>Reset</button>
+                </div>
+            </div>
+            <br>
+            <div class="search" style="justify-content: center;">
+                <div class="symbol"><img src="https://cdn-icons-png.flaticon.com/128/54/54481.png"></div>
+                <input type="search" placeholder="search for items">
+            </div>
+            <br><br>
+            <div class="Categories">
+                <label for="subject">Categories</label>
+                <select id="subject" name="subject" style="text-align: center; justify-content: center;">
+                    <option value="SE">Laptop</option>
+                    <option value="AI">Mobile phone</option>
+                    <option value="ML">Smart TV</option>
+                    <option value="CB">Smart watch</option>
+                </select>
+            </div>
+            <br><br>
+            <div class="Categories">
+                <label for="subject">Price-Range</label>
+                <select id="subject" name="subject" style="text-align: center; justify-content: center;">
+                    <option value="SE">< $100</option>
+                    <option value="AI">$100-200</option>
+                    <option value="ML">$200-300</option>
+                    <option value="CB">> $300</option>
+                </select>
+                <br><br>
+                <h2>Shopping Cart</h2>
+            </div>
+            <div class="cart-items" id="cart-items"></div>
+        </div>
+
+        <div class="list">
+            <div class="items">
+                <h1>Product Catalog</h1>
+                <div class="product-list" id="product-list" style="font-size: smaller; text-align: center; justify-content: center;">
+                    <p id="demo"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="dom.js">
+        
+    </script>
+</body>
+</html>
