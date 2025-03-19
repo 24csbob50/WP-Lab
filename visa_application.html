@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visa Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        input, select, button {
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 18px;
+            color: red;
+        }
+
+        #success {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Visa Application</h2>
+
+    <form id="visaForm">
+        <label for="passport">Passport Number (8-10 characters):</label><br>
+        <input type="text" id="passport" name="passport" required><br>
+
+        <label for="country">Country:</label><br>
+        <select id="country" name="country" required>
+            <option value="">Select a country</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="India">India</option>
+            <option value="UK">UK</option>
+            <option value="Australia">Australia</option>
+        </select><br>
+
+        <button type="button" onclick="validateForm()">Apply for Visa</button>
+    </form>
+
+    <div id="message"></div>
+    <div id="success"></div>
+
+    <script>
+        function validateForm() {
+            const passport = document.getElementById('passport').value;
+            const country = document.getElementById('country').value;
+            const message = document.getElementById('message');
+            const success = document.getElementById('success');
+
+            message.textContent = '';  // Clear previous messages
+            success.textContent = '';
+
+            // Check if all fields are filled
+            if (!passport || !country) {
+                message.textContent = "All fields are required!";
+                return;
+            }
+
+            // Check passport number length
+            if (passport.length < 8 || passport.length > 10) {
+                message.textContent = "Invalid passport number!";
+                return;
+            }
+
+            // If all validations pass, display success message
+            success.textContent = "Visa application submitted successfully!";
+        }
+    </script>
+
+</body>
+</html>
